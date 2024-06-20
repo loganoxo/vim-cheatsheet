@@ -64,9 +64,9 @@
 * [按键说明](#按键说明)
 * [网络资源](#网络资源)
 * [使用建议](#使用建议)
-* [相关书籍](#相关书籍)
 * [Vim键盘图](#vim键盘图)
-* [参考信息](#参考信息)
+* [Ctrl按键](#Ctrl按键)
+* [Ctrl-X模式](#Ctrl-X模式)
 
 
 
@@ -79,7 +79,7 @@ N{command}          # 重复某个命令 N 次，例如：10k，光标上移 10 
 
 善用宏和正则表达式，同样可以达到减少重复操作的目的。
 
-
+* normal模式下键入`5a文本<ESC>`  会插入5次`文本`
 
 ## 光标移动
 
@@ -1757,23 +1757,6 @@ Ctrl+{char}         # 作为控制字符输入的 {char}；即按住 Ctrl 键再
 ```
 
 
-
-## 网络资源
-
-- 最新版本 Vim：https://github.com/vim/vim   
-- Windows 版：https://github.com/vim/vim-win32-installer/releases
-- 插件浏览：http://vimawesome.com
-- 正确设置 Alt 换挡键：http://www.skywind.me/blog/archives/2021
-- 视频教程：http://vimcasts.org/
-- 中文帮助：http://vimcdoc.sourceforge.net/doc/help.html
-- 中文版入门到精通：https://github.com/wsdjeg/vim-galore-zh_cn
-- 五分钟脚本入门：http://www.skywind.me/blog/archives/2193
-- 脚本精通：http://learnvimscriptthehardway.stevelosh.com/
-- 十六年使用经验：http://zzapper.co.uk/vimtips.html
-- 配色方案：http://vimcolors.com/
-
-
-
 ## 使用建议
 
 - 多使用 :h[elp] {command} 获取显示相关命令的帮助文档，提高相关命令的认识水平。
@@ -1799,10 +1782,19 @@ Ctrl+{char}         # 作为控制字符输入的 {char}；即按住 Ctrl 键再
 - Windows 下的 GVim 可以设置 set rop=type:directx, renmode:5 增强显示。
 - 当你觉得做某事很低效时，你应该停下来，然后思考正确的高效方式来完成。
 
+## 网络资源
 
-## 相关书籍
-
-[Vim 实用技巧（英文版）](https://www.amazon.com/Practical-Vim-Edit-Speed-Thought-ebook-dp-B018T6ZVPK/dp/B018T6ZVPK/ref=mt_other?_encoding=UTF8&me=&qid=) |  [Vim 实用技巧（中文版）](https://book.douban.com/subject/26967597/)
+- 最新版本 Vim：https://github.com/vim/vim
+- Windows 版：https://github.com/vim/vim-win32-installer/releases
+- 插件浏览：http://vimawesome.com
+- 正确设置 Alt 换挡键：http://www.skywind.me/blog/archives/2021
+- 视频教程：http://vimcasts.org/
+- 中文帮助：http://vimcdoc.sourceforge.net/doc/help.html
+- 中文版入门到精通：https://github.com/wsdjeg/vim-galore-zh_cn
+- 五分钟脚本入门：http://www.skywind.me/blog/archives/2193
+- 脚本精通：http://learnvimscriptthehardway.stevelosh.com/
+- 十六年使用经验：http://zzapper.co.uk/vimtips.html
+- 配色方案：http://vimcolors.com/
 
 
 
@@ -1811,18 +1803,126 @@ Ctrl+{char}         # 作为控制字符输入的 {char}；即按住 Ctrl 键再
 ![vim 命令键盘图](resources/vim-commands_CN.png)
 
 
+## Ctrl按键
 
-## 参考信息
 
-- https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt
-- http://blog.g-design.net/post/4789778607/vim-cheat-sheet
-- http://www.fprintf.net/vimCheatSheet.html
-- http://www.ouyaoxiazai.com/article/24/654.html
-- http://bbs.it-home.org/thread-80794-1-1.html
-- http://www.lpfrx.com/wp-content/uploads/2008/09/vi.jpg
-- https://github.com/glts/vim-cottidie/blob/master/autoload/cottidie/tips
-- https://github.com/hobbestigrou/vimtips-fortune/blob/master/fortunes/vimtips
-- http://michael.peopleofhonoronly.com/vim/
+
+|                | Normal                                      |                            Insert                            | Visual            | Command                  |
+| -------------- | ------------------------------------------- | :----------------------------------------------------------: | ----------------- | ------------------------ |
+| <C-a>          | 将光标下的数字加1                           |                       光标下的数字加1                        | 将光标下的数字加1 |                          |
+| <C-b>          | 向上滚动一页                                |               光标左移一个字符（终端中的行为）               |                   |                          |
+| <C-c>          |                                             |                         退出插入模式                         |                   | 中断当前命令             |
+| <C-d>          | 向下滚动半页                                |                           减少缩进                           |                   |                          |
+| <C-e>          | 向下滚动一行                                | 插入一个来自插入点以下的字符(若光标所在列在下一行存在字符)（终端中的行为） |                   |                          |
+| <C-f>          | 向下滚动一页                                |               光标右移一个字符（终端中的行为）               |                   |                          |
+| <C-g>          | 显示文件信息                                |                                                              |                   |                          |
+| <C-h>          |                                             |                删除前一个字符（等同于退格键）                |                   |                          |
+| <C-i>          | 跳转到下一个位置(前进)                      |                插入一个制表符（等同于 <Tab>）                |                   |                          |
+| <C-j>          |                                             |                插入新行（等同于 <CR>和<C-m>）                |                   |                          |
+| <C-k>          |                                             |                    删除光标后的字符到行尾                    |                   |                          |
+| <C-l>          | 清除并重绘屏幕                              |                                                              |                   |                          |
+| <C-m>          |                                             |                插入新行（等同于 <CR>和<C-j>）                |                   |                          |
+| <C-n>          |                                             |                    选择补全菜单中的下一项                    |                   |                          |
+| <C-o>          | 光标跳转后,回到原来的位置(后退)             | **插入模式中的单命令执行**：在插入模式下按 `Ctrl-O`，你可以临时执行一个普通模式命令，然后自动返回插入模式 |                   |                          |
+| <C-p>          |                                             |                    选择补全菜单中的上一项                    |                   |                          |
+| <C-q>          | 进入可视块模式(等同于<C-v>)（在某些终端中） |                                                              |                   |                          |
+| <C-r>          | 按下u撤销输入后, 重做                       |                        插入寄存器内容                        |                   | 插入寄存器内容           |
+| <C-s>          | 无默认行为（在某些终端中暂停输出）          |                                                              |                   |                          |
+| <C-t>          |                                             |                           增加缩进                           |                   |                          |
+| <C-u>          | 向上滚动半页                                |                   删除当前行之前的所有字符                   |                   | 删除当前行之前的所有字符 |
+| <C-v>          | 进入可视块模式                              |                                                              |                   |                          |
+| <C-w>          | 窗口命令前缀                                |                                                              |                   |                          |
+| <C-x>          |                                             |                 进入 Ctrl-X 模式（用于补全）                 |                   |                          |
+| <C-y>          | 向上滚动一行                                |                   从上一行复制字符到光标处                   |                   |                          |
+| <C-z>          | 挂起 Vim（在 Unix 系统中）                  |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+| <C-[>          |                                             |                退出插入模式（等同于 `<Esc>`）                |                   |                          |
+| <C-\>          | 进入插入模式的 Ctrl-\ 模式                  |                                                              |                   |                          |
+| <C-]>          | 跳转到光标下标签定义处                      |                                                              |                   |                          |
+| <C-^>          | 切换到上一个缓冲区                          |                                                              |                   |                          |
+| <C-@>          |                                             |                        插入 NUL 字符                         |                   |                          |
+| <C-0> 到 <C-9> | 无默认行为                                  |                          无默认行为                          | 无默认行为        | 无默认行为               |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+|                |                                             |                                                              |                   |                          |
+
+
+
+## Ctrl-X模式
+
+
+
+在 Vim 中，`Ctrl-X` 模式是插入模式下的一组补全命令，可以提供多种类型的补全。以下是常用的 `Ctrl-X` 模式补全类型及其作用：
+
+### 常见的 `Ctrl-X` 模式补全类型
+
+1. **文件名补全（Ctrl-X Ctrl-F）**
+   - 快捷键：`Ctrl-X Ctrl-F`
+   - 功能：补全文件名。
+   - 用法：输入文件路径的部分内容，然后按 `Ctrl-X Ctrl-F` 来补全文件名。
+2. **关键字补全（Ctrl-N 和 Ctrl-P）**
+   - 快捷键：`Ctrl-N`（下一个）、`Ctrl-P`（上一个）
+   - 功能：补全当前缓冲区中出现的关键字。
+   - 用法：输入关键字的部分内容，然后按 `Ctrl-N` 或 `Ctrl-P` 来补全。
+3. **字典补全（Ctrl-X Ctrl-K）**
+   - 快捷键：`Ctrl-X Ctrl-K`
+   - 功能：根据字典文件补全单词。
+   - 用法：输入单词的部分内容，然后按 `Ctrl-X Ctrl-K` 来补全。
+4. **标签补全（Ctrl-X Ctrl-]）**
+   - 快捷键：`Ctrl-X Ctrl-]`
+   - 功能：根据标签补全。
+   - 用法：输入标签的部分内容，然后按 `Ctrl-X Ctrl-]` 来补全。
+5. **文件中的定义补全（Ctrl-X Ctrl-I）**
+   - 快捷键：`Ctrl-X Ctrl-I`
+   - 功能：补全当前文件中所有包含的定义。
+   - 用法：输入单词的部分内容，然后按 `Ctrl-X Ctrl-I` 来补全。
+6. **用户定义补全（Ctrl-X Ctrl-U）**
+   - 快捷键：`Ctrl-X Ctrl-U`
+   - 功能：使用用户定义的补全方法。
+   - 用法：输入单词的部分内容，然后按 `Ctrl-X Ctrl-U` 来补全。
+7. **拼写建议补全（Ctrl-X Ctrl-S）**
+   - 快捷键：`Ctrl-X Ctrl-S`
+   - 功能：提供拼写建议。
+   - 用法：输入单词的部分内容，然后按 `Ctrl-X Ctrl-S` 来补全。
+8. **完整的 Ctrl-X 补全菜单**
+   - `Ctrl-X Ctrl-L`：整行补全。
+   - `Ctrl-X Ctrl-V`：补全 Vim 选项。
+   - `Ctrl-X Ctrl-D`：宏定义补全。
+   - `Ctrl-X Ctrl-O`：补全 Omni 语法（如 LSP 补全）。
+
+### 示例操作
+
+#### 文件名补全
+
+1. 输入部分文件路径，例如 `~/do`。
+2. 按 `Ctrl-X Ctrl-F`，Vim 会尝试补全文件名，例如补全为 `~/documents/`。
+
+#### 关键字补全
+
+1. 输入部分单词，例如 `var`.
+2. 按 `Ctrl-N` 或 `Ctrl-P`，Vim 会在当前缓冲区中搜索关键字并补全，例如补全为 `various`。
+
+#### 标签补全(代码中的标识符，如函数名、变量名、类名等)
+
+1. 输入部分标签名，例如 `fea`。
+2. 按 `Ctrl-X Ctrl-]`，Vim 会根据标签补全，例如补全为 `features`。
+
+
+
+
 
 
 
