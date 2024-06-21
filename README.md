@@ -65,6 +65,8 @@
 * [网络资源](#网络资源)
 * [使用建议](#使用建议)
 * [Vim键盘图](#vim键盘图)
+* [其他图](#其他图)
+* [正则表达式的模式](#正则表达式的模式)
 * [Ctrl按键](#Ctrl按键)
 * [Ctrl-X模式](#Ctrl-X模式)
 
@@ -1800,7 +1802,30 @@ Ctrl+{char}         # 作为控制字符输入的 {char}；即按住 Ctrl 键再
 
 ## vim键盘图
 
-![vim 命令键盘图](resources/vim-commands_CN.png)
+![vim 命令键盘图](images/vim-commands_CN.png)  
+
+![vim 详细键盘图](images/advanced.png)  
+
+
+## 其他图
+
+![vim 移动](images/entry.png)  
+
+![vim 更详细](images/morden.png)  
+
+![vim 文字版](images/text.png)
+
+
+## 正则表达式的模式
+
+* 默认是 magic,正则表达式元字符如 .、*、? 等是有效的
+* nomagic 模式下，只有 ^ 和 $ 仍作为元字符，其它的元字符需要转义才能使用
+* very magic 模式下，几乎所有字符都被视为元字符，不需要转义
+* very nomagic 模式下，几乎所有字符都被视为普通字符，必须显式转义
+
+![vim 匹配](images/vim-magic-mode.jpg)
+
+![vim 匹配举例](images/vim-magic-mode-demo.jpg)
 
 
 ## Ctrl按键
