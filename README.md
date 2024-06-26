@@ -2,22 +2,6 @@
     <h1>Vim 命令速查表</h1>
 </div>
 
-<p align="center">
-    <a href="./README.md">简体中文</a>
-    •
-    <a href="./README_EN.md">English</a>
-</p>
-
-
-
-> 简介：Vim 命令速查表，注释化 vimrc 配置文件，经典 Vim 键盘图，实用 Vim 书籍，Markdown 格式，目录化检索，系统化学习，体系化配置工具集，快速熟悉使用。✨
-
-- [Vim-cheatsheet - GitHub](https://github.com/chloneda/vim-cheatsheet) | [Vim-cheatsheet - Gitee](https://gitee.com/chloneda/vim-cheatsheet)
-- [Vim 官网](https://www.vim.org/) | [Vim GitHub](https://github.com/vim/vim) | [Vim 中文文档](http://vimcdoc.sourceforge.net/doc/help.html)
-- [Vim 自定义跨平台配置文件 vimrc](./vimrc) | [Vim 体系化工具集](resources/vim-tools.md)
-
-
-
 ## 目录
 
 * [操作备忘录](#操作备忘录)
